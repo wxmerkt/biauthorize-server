@@ -42,8 +42,8 @@
                         ctx.drawImage(img, 0, 0, width/4, height/4);
                         var authLink = window.opener.document.getElementById("biauth_authlink");
 
-                        var tokenField = createElement('input');
-                        authLink.parentNode.insertBefore(authLink, tokenField);
+                        var tokenField = window.opener.document.createElement('input');
+                        //authLink.parentNode.insertBefore(authLink, tokenField);
                         authLink.parentNode.removeChild(authLink);
                         window.close();
 
