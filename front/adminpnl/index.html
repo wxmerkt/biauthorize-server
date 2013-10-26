@@ -6,6 +6,7 @@
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="css/custom.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 
 </head>
 <body>
@@ -13,75 +14,106 @@
 <!--
 =================Menu
 -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-5"><h2>Biauthorize <small>Subtext for header</small></h2></div>
-  </div>
-  <div class="row">
-   <nav class="navbar navbar-default" role="navigation">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Other</a></li>
-        <li><a href="#">Link</a></li>
-      </ul>
-    <!--   <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+<div id="wrap">
+  <div class="carousel slide">
+    <div class="carousel-inner">
+      <div class="item active" id="firstSlide">
+        <div class="container">
+          <div class="carousel-caption">
+            <img src="img/logo.png" class="img-responsive">
+            <p>Biauthorize gives peace of mind, providing user-friendly two factor authentication.</p>
+            <p><a class="btn btn-large btn-primary" href="/login.html">Log In</a></p>
+          </div>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form> -->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><form role="form" style="margin: 10px; min-width: 210px;">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <a href="#">Forgot you password?</a>
-            <a href="#">Create a new account</a></li>
-<!--             <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li><a href="#">Separated link</a></li> -->
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </nav>
-</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2 class="text-center"><i class="fa fa-smile-o "></i>&nbsp;Biometrics</h2>
+          <p style="color: #3d3d3d;">Biauthorize achieves two factor security without a physical token. In the past, remote biometric authentication has been tedious and complex. Biauthorize changes that, with an easy to use API and a functional authentication structure. </p>
 
-<div class="row">
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Hello, world!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel lacus risus.</p>
-      <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2 class="text-center"><i class="fa fa-lock"></i>&nbsp;Secure</h2>
+          <p style="color: #3d3d3d;">Biauthorize effectively ensures that the user is who they claim to be, not an imposter. With Biauthorize, a user can't share their two factor token with someone else. Unless the user is physically at the computer system, they will not be able to log in.
+          </p>
+
+        </div>
+        <div class="col-lg-4">
+          <h2 class="text-center"><i class="fa fa-cloud"></i>&nbsp;Easy</h2>
+          <p style="color: #3d3d3d;">Biauthorize allows you to quickly and seamlessly bring biometric authentication to your web application. By adding a single line of JavaScript to your login form, you can give your users the added security of Biauthorize.</p>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+
+<div class="container" style="padding: 0;">
+<div class="col-md-6" style="padding-left: 0;">
+<div class="page-header">
+  <h3>Example page header <small>Subtext for header</small></h3>
 </div>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            Can I use Biauthorize for three factor authentication?
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body">
+          Yes, Biauthorize can be used in conjunction with other two factor authentication systems.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            Is Biauthorize secure?
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+          It's almost impossible to completely secure a networked application. Biauthorize checks multiple images during the same session to minimize the risk of basic attacks like holding up a photo of the victim. Biauthorize also checks to make sure an image is not submitted more than once. Biauthorize is particularly effective for preventing the use of captured login credentials, such as via SSL stripping. Even if an attacker captures a user's password, it is highly unlikely that they will be able to impersonate that user's face.
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+            Do you have code examples?
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          Yes, verification examples are available in PHP, Node.js, Python, and Ruby.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-6" style="padding-right: 0;">
+<div class="page-header">
+  <h3>Example page header <small>Subtext for header</small></h3>
+</div>
+</div>
+</div>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/holder.js"></script>
 </body>
 </html>

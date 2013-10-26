@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Biauthorise</title>
+        <title>biauthorize</title>
         <script type="text/javascript" src="./face_files/jquery.min.js"></script>
         <script type="text/javascript" src="./face_files/jsfeat.js"></script>
         <script type="text/javascript" src="./face_files/compatibility.js"></script>
@@ -37,9 +37,15 @@
                         var img = new Image();
                         img.src = imgURL;
 
+                        $.ajax({
+                            url: "http://146.185.164.233/test/",
+                            type: "POST",
+                            data: {image: img}
+                        })
+
                         var prev_c = document.getElementById("previewCanvas");
                         var ctx = prev_c.getContext("2d");
-                        ctx.drawImage(img, 0, 0, width/4, height/4);
+                        ctx.drawImage(img, 0, 0, width / 4, height / 4);
 
                         window.opener.postMessage("T0k3n_123", "*");
                         setTimeout(function(){window.close();}, 1000);
@@ -54,7 +60,16 @@
                     return image_data;
                 };
                 cGaze.setFrameOperator(frameOp);
+<<<<<<< HEAD
             } 
+=======
+
+                if (waiting) {
+                    waiting = false;
+                    $("#statusNotifier").html("No face found yet");
+                }
+            }
+>>>>>>> c5fb032cc8dec48ece5c5df9b7917d2acc6f0796
         </script>
     </head>
     <body>
