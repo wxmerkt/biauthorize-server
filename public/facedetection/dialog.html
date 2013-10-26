@@ -46,14 +46,14 @@
 
                     }
 
+                    if (waiting) {
+                        waiting = false;
+                        $("#statusNotifier").html("No face found yet");
+                    }
+
                     return image_data;
                 };
                 cGaze.setFrameOperator(frameOp);
-
-                if (waiting) {
-                    waiting = false;
-                    $("#statusNotifier").html("No face found yet");
-                }
             } 
         </script>
     </head>
