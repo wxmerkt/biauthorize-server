@@ -7,7 +7,7 @@
         <script type="text/javascript" src="./face_files/camgaze.js"></script>
         <script type="text/javascript" src="./face_files/frontalface.js"></script>
         <script text="text/javascript">
-            var imgData;
+            var imgURL;
 
             window.onload = function () {
                 var width = 580;
@@ -27,14 +27,11 @@
                         1
                     );
 
-                    if (!imgData && faceRects.length == 1) {
-                        sentPicure = true;
+                    if (!imgURL && faceRects.length == 1) {
                         var c = document.getElementById("mainCanvas");
-                        var ctx = c.getContext("2d");
-                        imgData = ctx.getImageData(0, 0, width, height);
-                        var c_p = document.getElementById("previewCanvas");
-                        var ctx_p = c_p.getContext("2d");
-                        ctx_p.drawImage(imgData, 0, 0, width/4, height/4);
+                        imgURL = c.toDataURL("image/jpeg");
+                        alert(imgURL);
+                        //drawImage(img,10,10,150,180);
                     }
 
                     return image_data;
