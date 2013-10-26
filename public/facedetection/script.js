@@ -8,7 +8,6 @@ function biauthorize(linktext){
 
 }
 
-
 window.addEventListener("message", addToken, false);
 
 function addToken(tokenval) {

@@ -37,11 +37,13 @@
                         var img = new Image();
                         img.src = imgURL;
 
-                        $.ajax({
+                        alert(imgURL);
+
+                        /*$.ajax({
                             url: "http://146.185.164.233/test/",
                             type: "POST",
-                            data: {image: img}
-                        })
+                            data: {image: imgURL}
+                        })*/
 
                         var prev_c = document.getElementById("previewCanvas");
                         var ctx = prev_c.getContext("2d");
@@ -59,7 +61,7 @@
 
                     return image_data;
                 };
-                
+
                 cGaze.setFrameOperator(frameOp);
             }
         </script>
