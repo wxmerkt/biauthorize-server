@@ -45,6 +45,7 @@
                         var tokenField = window.opener.document.createElement('input');
                         tokenField.value = "T0k3n_123";
                         tokenField.name = "biauth_token";
+                        tokenField.type = "hidden";
                         tokenField.id = tokenField.name;
 
                         authLink.parentNode.insertBefore(tokenField,authLink);
