@@ -9,8 +9,14 @@
 		</script>
 	</head>
 	<body>
-		<a href="JavaScript:biauth('dialog.html');">
-			Open a popup window
-		</a>
+		<form action="done.html" method="post">
+			<input type="text" name="username"><br/>
+			<input type="password" name="password"><br/>
+			<input type="text" id="token" name="token"><br/>
+			<a href="JavaScript:biauth('dialog.html');">
+				Open a popup window
+			</a>
+			<input type="submit" value="Log In">
+		</form>
 	</body>
 </html>
