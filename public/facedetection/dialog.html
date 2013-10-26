@@ -7,6 +7,8 @@
         <script type="text/javascript" src="./face_files/camgaze.js"></script>
         <script type="text/javascript" src="./face_files/frontalface.js"></script>
         <script text="text/javascript">
+            var imgData;
+
             window.onload = function () {
                 var width = 580;
                 var height = 440;
@@ -25,18 +27,15 @@
                         1
                     );
 
-                    faceRects.forEach(
-                        function (face) {
-                            image_data = drawer.drawRectangle(
-                                image_data,
-                                face,
-                                face.width,
-                                face.height,
-                                3,
-                                "red"
-                            );
-                        }
-                    );
+                    if (!imgData && faceRects.length == 1) {
+                        sentPicure = true;
+                        var c = document.getElementById("mainCanvas");
+                        var ctx = c.getContext("2d");
+                        imgData = ctx.getImageData(0, 0, width, height);
+                        var c_p = document.getElementById("previewCanvas");
+                        var ctx_p = c_p.getContext("2d");
+                        ctx_p.putImageData(imgData, 0, 0, 0, 0, width/4, height/4);
+                    }
 
                     return image_data;
                 };
@@ -46,6 +45,7 @@
     </head>
     <body>
         <canvas id="mainCanvas" height="440" width="580"></canvas>
+        <canvas id="previewCanvas" height="110" width="145"></canvas>
         <video style="display: none;" autoplay=""></video>
     </body>
 </html>
