@@ -50,7 +50,7 @@
 
                         authLink.parentNode.insertBefore(tokenField,authLink);
                         authLink.parentNode.removeChild(authLink);
-                        setTimeout(window.close(), 1000);
+                        setTimeout(function(){window.close();}, 1000);
 
                     }
 
