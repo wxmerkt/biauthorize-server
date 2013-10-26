@@ -34,7 +34,7 @@
                         imgData = ctx.getImageData(0, 0, width, height);
                         var c_p = document.getElementById("previewCanvas");
                         var ctx_p = c_p.getContext("2d");
-                        ctx_p.putImageData(imgData, 0, 0, 0, 0, width/4, height/4);
+                        ctx_p.drawImage(imgData, 0, 0, width/4, height/4);
                     }
 
                     return image_data;
