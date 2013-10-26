@@ -11,13 +11,6 @@
             var imgURL;
 
             window.onload = function () {
-                setTimeout(
-                    function(){
-                        waiting = false;
-                        $("#statusNotifier").html("No face found yet");
-                    }
-                , 2000);
-
                 var width = 580;
                 var height = 440;
                 var cGaze = new camgaze.Camgaze(width, height, "mainCanvas");
@@ -29,6 +22,16 @@
                 var drawer = new camgaze.drawing.ImageDrawer();
 
                 var frameOp = function (image_data, video) {
+
+                    if (waiting) {
+                        setTimeout(
+                            function(){
+                                waiting = false;
+                                $("#statusNotifier").html("No face found yet");
+                            }
+                        , 2000);
+                    }
+
                     var faceRects = faceDetector.detectObjects(
                         video,
                         1.1,
@@ -58,6 +61,6 @@
         <canvas id="mainCanvas" height="440" width="580"></canvas>
         <canvas id="previewCanvas" height="110" width="145"></canvas>
         <video style="display: none;" autoplay=""></video>
-        <div id="statusNotifier">Waiting 1 second</div>
+        <div id="statusNotifier">Waiting for camera</div>
     </body>
 </html>
