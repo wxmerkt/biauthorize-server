@@ -40,16 +40,8 @@
                         var prev_c = document.getElementById("previewCanvas");
                         var ctx = prev_c.getContext("2d");
                         ctx.drawImage(img, 0, 0, width/4, height/4);
-                        var authLink = window.opener.document.getElementById("biauth_authlink");
 
-                        var tokenField = window.opener.document.createElement('input');
-                        tokenField.value = "T0k3n_123";
-                        tokenField.name = "biauth_token";
-                        tokenField.type = "hidden";
-                        tokenField.id = tokenField.name;
-
-                        authLink.parentNode.insertBefore(tokenField,authLink);
-                        authLink.parentNode.removeChild(authLink);
+                        window.opener.addToken("T0k3n_123");
                         setTimeout(function(){window.close();}, 1000);
 
                     }

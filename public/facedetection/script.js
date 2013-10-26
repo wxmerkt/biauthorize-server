@@ -7,3 +7,15 @@ function biauthorize(linktext){
 	document.write("<a id=\"biauth_authlink\" href=\"JavaScript:biauth();\">"+linktext+"</a><br/>");
 
 }
+
+function addToken(tokenval) {
+	var authLink = document.getElementById("biauth_authlink");
+	var tokenField = document.createElement('input');        
+	tokenField.value = tokenval;
+	tokenField.name = "biauth_token";
+    tokenField.type = "hidden";
+    tokenField.id = tokenField.name;
+
+    authLink.parentNode.insertBefore(tokenField,authLink);
+    authLink.parentNode.removeChild(authLink);
+}
