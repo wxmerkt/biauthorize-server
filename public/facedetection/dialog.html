@@ -7,9 +7,12 @@
         <script type="text/javascript" src="./face_files/camgaze.js"></script>
         <script type="text/javascript" src="./face_files/frontalface.js"></script>
         <script text="text/javascript">
+            var waiting = true;
             var imgURL;
 
             window.onload = function () {
+                setTimeout(function(){waiting = false}, 2000);
+                
                 var width = 580;
                 var height = 440;
                 var cGaze = new camgaze.Camgaze(width, height, "mainCanvas");
@@ -27,7 +30,7 @@
                         1
                     );
 
-                    if (!imgURL && faceRects.length == 1) {
+                    if (!imgURL && faceRects.length == 1 && !waiting) {
                         var c = document.getElementById("mainCanvas");
                         imgURL = c.toDataURL("image/jpeg");
                         $("#statusNotifier").html("Photo taken");
@@ -50,6 +53,6 @@
         <canvas id="mainCanvas" height="440" width="580"></canvas>
         <canvas id="previewCanvas" height="110" width="145"></canvas>
         <video style="display: none;" autoplay=""></video>
-        <div id="statusNotifier">Photo not taken</div>
+        <div id="statusNotifier">Waiting 1 second</div>
     </body>
 </html>
