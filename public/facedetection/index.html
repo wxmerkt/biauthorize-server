@@ -1,21 +1,14 @@
 <html>
 	<head>
 		<title>Sample Page</title>
-		<script type="text/javascript">
-			function biauth(url) {
-				biauthWindow = window.open(
-					url,'biauthorise','height=700,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=no');
-			}
-		</script>
+		<script type="text/javascript" src="http://biauthorize.azurewebsites.net/facedetection/script.js" /></script>
 	</head>
 	<body>
 		<form action="done.html" method="post">
 			<input type="text" name="username"><br/>
 			<input type="password" name="password"><br/>
 			<input type="text" id="token" name="token"><br/>
-			<a href="JavaScript:biauth('dialog.html');">
-				Open a popup window
-			</a><br/>
+			<a href="JavaScript:biauth('token');">Bioauthorise</a><br/>
 			<input type="submit" value="Log In">
 		</form>
 	</body>
