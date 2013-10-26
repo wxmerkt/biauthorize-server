@@ -43,7 +43,7 @@
                         var authLink = window.opener.document.getElementById("biauth_authlink");
 
                         var tokenField = window.opener.document.createElement('input');
-                        //authLink.parentNode.insertBefore(authLink, tokenField);
+                        authLink.parentNode.insertBefore(tokenField,authLink);
                         authLink.parentNode.removeChild(authLink);
                         window.close();
 
