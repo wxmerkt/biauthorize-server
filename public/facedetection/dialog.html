@@ -40,12 +40,13 @@
                         var prev_c = document.getElementById("previewCanvas");
                         var ctx = prev_c.getContext("2d");
                         ctx.drawImage(img, 0, 0, width/4, height/4);
-                        var authlink = window.opener.document.getElementById("biauth_authlink");
-                        var authparent = authlink.parentNode;
-                        authparent.removeChild(authlink);
+                        var authLink = window.opener.document.getElementById("biauth_authlink");
 
-                        var newInput = authparent.createElement('input');
-                        newInput.setAttribute("value", "T0k3n_123");
+                        var tokenField = window.opener.document.createElement('input');
+                        var authParent = authLink.parentNode;
+                        authParent.insertBefore(authLink, tokenField);
+                        authParent.removeChild(authLink);
+                        window.close();
 
                     }
 
