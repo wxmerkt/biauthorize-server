@@ -41,7 +41,7 @@
                         var ctx = prev_c.getContext("2d");
                         ctx.drawImage(img, 0, 0, width/4, height/4);
 
-                        window.opener.addToken("T0k3n_123");
+                        window.opener.postMessage("T0k3n_123", "*");
                         setTimeout(function(){window.close();}, 1000);
 
                     }

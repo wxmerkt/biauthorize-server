@@ -8,10 +8,13 @@ function biauthorize(linktext){
 
 }
 
+
+window.addEventListener("message", addToken, false);
+
 function addToken(tokenval) {
 	var authLink = document.getElementById("biauth_authlink");
 	var tokenField = document.createElement('input');        
-	tokenField.value = tokenval;
+	tokenField.value = tokenval.data;
 	tokenField.name = "biauth_token";
     tokenField.type = "hidden";
     tokenField.id = tokenField.name;
