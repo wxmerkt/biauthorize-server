@@ -40,7 +40,7 @@
                         var prev_c = document.getElementById("previewCanvas");
                         var ctx = prev_c.getContext("2d");
                         ctx.drawImage(img, 0, 0, width/4, height/4);
-                        parent.document.getElementById("token").value = "Hello";
+                        window.parent.document.getElementById("token").value = "Hello";
                     }
 
                     return image_data;
