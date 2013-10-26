@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Biauthorise</title>
+        <script type="text/javascript" src="./face_files/jquery.min.js"></script>
+        <script type="text/javascript" src="./face_files/jsfeat.js"></script>
+        <script type="text/javascript" src="./face_files/compatibility.js"></script>
+        <script type="text/javascript" src="./face_files/camgaze.js"></script>
+        <script type="text/javascript" src="./face_files/frontalface.js"></script>
+        <script text="text/javascript">
+            window.onload = function () {
+                var width = 580;
+                var height = 440;
+                var cGaze = new camgaze.Camgaze(width, height, "mainCanvas");
+                var faceDetector = new camgaze.CVUtil.HaarDetector(
+                    camgaze.cascades.frontalface,
+                    width,
+                    height
+                );
+                var drawer = new camgaze.drawing.ImageDrawer();
+
+                var frameOp = function (image_data, video) {
+                    var faceRects = faceDetector.detectObjects(
+                        video,
+                        1.1,
+                        1
+                    );
+
+                    faceRects.forEach(
+                        function (face) {
+                            image_data = drawer.drawRectangle(
+                                image_data,
+                                face,
+                                face.width,
+                                face.height,
+                                3,
+                                "red"
+                            );
+                        }
+                    );
+
+                    return image_data;
+                };
+                cGaze.setFrameOperator(frameOp);
+            } 
+        </script>
+    </head>
+    <body>
+        <canvas id="mainCanvas" height="440" width="580"></canvas>
+        <video style="display: none;" autoplay=""></video>
+    </body>
+</html>

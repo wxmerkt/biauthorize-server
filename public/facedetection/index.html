@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Sample Page</title>
+		<script type="text/javascript">
+			function biauth(url) {
+				biauthWindow = window.open(
+					url,'biauthorise','height=700,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=no');
+			}
+		</script>
+	</head>
+	<body>
+		<a href="JavaScript:biauth('dialog.html');">
+			Open a popup window
+		</a>
+	</body>
+</html>
