@@ -4,6 +4,6 @@ function biauth(token) {
 }
 
 function biauthorize(linktext){
-	document.write("<span><a id=\"biauth_authlink\" href=\"JavaScript:biauth();\">"+linktext+"</a></span><br/>");
+	document.write("<a id=\"biauth_authlink\" href=\"JavaScript:biauth();\">"+linktext+"</a><br/>");
 
 }
