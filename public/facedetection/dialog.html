@@ -30,6 +30,8 @@
                     if (!imgURL && faceRects.length == 1) {
                         var c = document.getElementById("mainCanvas");
                         imgURL = c.toDataURL("image/jpeg");
+                        $("#statusNotifier").innerHTML("Photo taken");
+                        
                         var img = new Image();
                         img.src = imgURL;
 
@@ -48,5 +50,6 @@
         <canvas id="mainCanvas" height="440" width="580"></canvas>
         <canvas id="previewCanvas" height="110" width="145"></canvas>
         <video style="display: none;" autoplay=""></video>
+        <div id="statusNotifier">Photo not taken</div>
     </body>
 </html>
