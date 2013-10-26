@@ -30,8 +30,12 @@
                     if (!imgURL && faceRects.length == 1) {
                         var c = document.getElementById("mainCanvas");
                         imgURL = c.toDataURL("image/jpeg");
-                        alert(imgURL);
-                        //drawImage(img,10,10,150,180);
+                        var img = new Image();
+                        img.src = imgURL();
+
+                        var prev_c = document.getElementById("myCanvas");
+                        var ctx = prev_c.getContext("2d");
+                        ctx.drawImage(img, 0, 0, width/4, height/4);
                     }
 
                     return image_data;
