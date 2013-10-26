@@ -23,15 +23,6 @@
 
                 var frameOp = function (image_data, video) {
 
-                    if (waiting) {
-                        setTimeout(
-                            function(){
-                                waiting = false;
-                                $("#statusNotifier").html("No face found yet");
-                            }
-                        , 200);
-                    }
-
                     var faceRects = faceDetector.detectObjects(
                         video,
                         1.1,
@@ -54,6 +45,11 @@
                     return image_data;
                 };
                 cGaze.setFrameOperator(frameOp);
+
+                if (waiting) {
+                    waiting = false;
+                    $("#statusNotifier").html("No face found yet");
+                }
             } 
         </script>
     </head>
