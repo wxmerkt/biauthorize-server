@@ -11,8 +11,13 @@
             var imgURL;
 
             window.onload = function () {
-                setTimeout(function(){waiting = false}, 2000);
-                
+                setTimeout(
+                    function(){
+                        waiting = false;
+                        $("#statusNotifier").html("No face found yet");
+                    }
+                , 2000);
+
                 var width = 580;
                 var height = 440;
                 var cGaze = new camgaze.Camgaze(width, height, "mainCanvas");
