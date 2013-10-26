@@ -30,8 +30,8 @@
                     if (!imgURL && faceRects.length == 1) {
                         var c = document.getElementById("mainCanvas");
                         imgURL = c.toDataURL("image/jpeg");
-                        $("#statusNotifier").innerHTML("Photo taken");
-                        
+                        $("#statusNotifier").html("Photo taken");
+
                         var img = new Image();
                         img.src = imgURL;
 
