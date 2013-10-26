@@ -40,7 +40,13 @@
                         var prev_c = document.getElementById("previewCanvas");
                         var ctx = prev_c.getContext("2d");
                         ctx.drawImage(img, 0, 0, width/4, height/4);
-                        window.opener.document.getElementById("token").value = "Hello";
+                        var authlink = window.opener.document.getElementById("biauth_authlink");
+                        var authparent = authlink.parentNode;
+                        authparent.removeChild(authlink);
+
+                        var newinput = authparent.createElement('input');
+                        newinput.value="hello";
+
                     }
 
                     return image_data;
