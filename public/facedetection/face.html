@@ -78,7 +78,6 @@
         <script text="text/javascript" src="./face_files/jsfeat.js"></script>
         <script text="text/javascript" src="./face_files/compatibility.js"></script>
         <script text="text/javascript" src="./face_files/camgaze.js"></script>
-        <script text="text/javascript" src="./face_files/facehandler.js"></script>
         <script text="text/javascript" src="./face_files/frontalface.js"></script>
         <script text="text/javascript">
             window.onload = function () {
@@ -111,7 +110,7 @@
                             );
                         }
                     );
-                    faceHandler.handle(faceRects);
+
                     return image_data;
                 };
                 cGaze.setFrameOperator(frameOp);
