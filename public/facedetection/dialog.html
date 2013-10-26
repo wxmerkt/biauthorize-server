@@ -44,10 +44,7 @@
                         var authparent = authlink.parentNode;
                         authparent.removeChild(authlink);
 
-                        var newInput = authparent.createElement('INPUT');
-                        newInput.id = "biauth_token";
-                        newInput.name = "biauth_token";
-                        newInput.type = "text";
+                        var newInput = authparent.createElement('input');
                         newInput.setAttribute("value", "T0k3n_123");
 
                     }
