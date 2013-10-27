@@ -41,11 +41,11 @@
                             var img = new Image();
                             img.src = imgURL;
 
-                            $.ajax({
+                            /*$.ajax({
                                 url: "http://146.185.164.233/test/",
                                 type: "POST",
                                 data: {image: imgURL.substring(23)}
-                            });
+                            });*/
 
                             var prev_c = document.getElementById("previewCanvas");
                             var ctx = prev_c.getContext("2d");
