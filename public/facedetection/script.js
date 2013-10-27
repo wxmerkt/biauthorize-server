@@ -1,6 +1,6 @@
 function biauth(token) {
 	biauthWindow = window.open(
-	'http://biauthorize.com:3000/biauthorize','Biauthorize','height=800,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=no');
+	'http://biauthorize.com/biauthorize','Biauthorize','height=800,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=no');
 }
 
 function biauthorize(linktext){
