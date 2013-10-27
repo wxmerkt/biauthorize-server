@@ -32,3 +32,12 @@
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+#biauth_textlabel {
+	color: #468847;
+}
+#biauth_authlink{
+
+}
+.btn-info {
+	width: 100%;
+}
