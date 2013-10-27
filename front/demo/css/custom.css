@@ -33,6 +33,9 @@
   border-top-right-radius: 0;
 }
 #biauth_textlabel {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
 	color: #468847;
 }
 #biauth_authlink{
@@ -40,4 +43,5 @@
 }
 .btn-info {
 	width: 100%;
+	margin-bottom: 6px;
 }
