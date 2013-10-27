@@ -32,26 +32,38 @@
 
                     if (!imgURL && faceRects.length == 1 && !waiting) {
                         var c = document.getElementById("mainCanvas");
-                        var c = prev_c.getContext("2d");
-                        imgURL = c.toDataURL("image/jpeg");
-                        $("#statusNotifier").html("Photo taken");
+                        var m_ctx = c.getContext("2d");
 
-                        var img = new Image();
-                        img.src = imgURL;
+                        var wholedata = m_ctx.getImageData(0, 0, width, heigh);
+                        var color_total = 0;
+                        for(var i = 0; i < wholedata.length; i += 4) {
+                            color_total += data[i];
+                            color_total += data[i + 1];
+                            color_total += data[i + 2];
+                        }
 
-                        $.ajax({
-                            url: "/biauthorize",
-                            type: "POST",
-                            data: {image: imgURL.substring(23)}
-                        });
+                        color_total *= 4/(3*wholedata.length);
 
-                        var prev_c = document.getElementById("previewCanvas");
-                        var ctx = prev_c.getContext("2d");
-                        ctx.drawImage(img, 0, 0, width / 4, height / 4);
+                        if (color_total > 12) {
+                            imgURL = c.toDataURL("image/jpeg");
+                            $("#statusNotifier").html("Photo taken");
 
-                        window.opener.postMessage("T0k3n_123", "*");
-                        setTimeout(function(){window.close();}, 1000);
+                            var img = new Image();
+                            img.src = imgURL;
 
+                            $.ajax({
+                                url: "/biauthorize",
+                                type: "POST",
+                                data: {image: imgURL.substring(23)}
+                            });
+
+                            var prev_c = document.getElementById("previewCanvas");
+                            var ctx = prev_c.getContext("2d");
+                            ctx.drawImage(img, 0, 0, width / 4, height / 4);
+
+                            window.opener.postMessage("T0k3n_123", "*");
+                            setTimeout(function(){window.close();}, 1000);
+                        }
                     }
 
                     if (waiting) {
