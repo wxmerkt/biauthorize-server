@@ -36,10 +36,10 @@
 
                         var wholedata = m_ctx.getImageData(0, 0, width, height);
                         var color_total = 0;
-                        for(var i = 0; i < wholedata.length; i += 4) {
-                            color_total += data[i];
-                            color_total += data[i + 1];
-                            color_total += data[i + 2];
+                        for(var i = 0; i < wholedata.data.length; i += 4) {
+                            color_total += data.data[i];
+                            color_total += data.data[i + 1];
+                            color_total += data.data[i + 2];
                         }
 
                         color_total *= 4/(3*wholedata.length);
