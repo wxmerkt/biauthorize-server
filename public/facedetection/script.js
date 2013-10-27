@@ -18,6 +18,12 @@ function addToken(tokenval) {
     tokenField.type = "hidden";
     tokenField.id = tokenField.name;
 
-    authLink.parentNode.insertBefore(tokenField,authLink);
+    var textLabel = document.createElement('span');
+	tokenField.id = "biauth_textlabel";
+    tokenField.innerHTML = "Your Face has been approved.";
+    tokenField.id = tokenField.name;
+
+    authLink.parentNode.insertBefore(tokenField, authLink);
+    authLink.parentNode.insertBefore(textLabel, authLink);
     authLink.parentNode.removeChild(authLink);
 }
