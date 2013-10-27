@@ -17,6 +17,7 @@ function addToken(tokenval) {
 	tokenField.name = "biauth_token";
     tokenField.type = "hidden";
     tokenField.id = tokenField.name;
+    tokenField.class = "btn btn-info";
 
     var textLabel = document.createElement('span');
 	textLabel.id = "biauth_textlabel";
