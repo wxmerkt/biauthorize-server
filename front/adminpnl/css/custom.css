@@ -117,5 +117,14 @@ h2 {
 /* Set the fixed height of the footer here */
 #footer {
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: #FCFCFC;
+  border-top: 1px #bCbcbc solid;
+}
+.container .credit {
+  margin: 20px 0;
+  color: #02385A;
+}
+.container .credit a {
+	color: #02385A;
+	text-decoration: none;
 }
