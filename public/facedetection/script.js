@@ -4,7 +4,7 @@ function biauth(token) {
 }
 
 function biauthorize(linktext){
-	document.write("<a id=\"biauth_authlink\" href=\"JavaScript:biauth();\">"+linktext+"</a><br/>");
+	document.write("<a class=\"btn btn-info\" id=\"biauth_authlink\" href=\"JavaScript:biauth();\">"+linktext+"</a><br/>");
 
 }
 
@@ -17,7 +17,6 @@ function addToken(tokenval) {
 	tokenField.name = "biauth_token";
     tokenField.type = "hidden";
     tokenField.id = tokenField.name;
-    tokenField.class = "btn btn-info";
 
     var textLabel = document.createElement('span');
 	textLabel.id = "biauth_textlabel";
