@@ -56,6 +56,7 @@ h2 {
   background-color: #FCFCFC;
   border-top: 1px #bCbcbc solid;
 }
+
 .container .credit {
   margin: 20px 0;
   color: #02385A;
@@ -63,4 +64,12 @@ h2 {
 .container .credit a {
 	color: #02385A;
 	text-decoration: none;
+}
+.btn-primary {
+	background-color: #A0D47E;
+	border-color: #74C043;
+}
+.btn-primary:hover {
+	background-color: #02385A;
+	border-color: #02385A;
 }
