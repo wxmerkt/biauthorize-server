@@ -36,7 +36,7 @@ function addToken(tokenval) {
 
     var textLabel = document.createElement('div');
 	textLabel.id = "biauth_textlabel";
-	textLabel.class = "alert alert-dismissable alert-success";
+	textLabel.className = "alert alert-dismissable alert-success";
     textLabel.innerHTML = "Your face has been approved.";
 
     authLink.parentNode.insertBefore(tokenField, authLink);
