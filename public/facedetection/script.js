@@ -19,9 +19,8 @@ function addToken(tokenval) {
     tokenField.id = tokenField.name;
 
     var textLabel = document.createElement('span');
-	tokenField.id = "biauth_textlabel";
-    tokenField.innerHTML = "Your Face has been approved.";
-    tokenField.id = tokenField.name;
+	textLabel.id = "biauth_textlabel";
+    textLabel.innerHTML = "Your Face has been approved.";
 
     authLink.parentNode.insertBefore(tokenField, authLink);
     authLink.parentNode.insertBefore(textLabel, authLink);
