@@ -5,75 +5,11 @@ body {
 h2 {
 	color: #02385A;
 }
-.jumbotron {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	text-align: center;
-	background-color: transparent;
-}
-.jumbotron .btn {
-	font-size: 21px;
-	padding: 14px 24px;
-}
-.dropdown-menu>li>a {
-	color: #428bca;
-	text-decoration: none;
-}
 
-.form-signin {
-	max-width: 330px;
-	padding: 15px;
-	margin: 0 auto;
-}
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-	margin-bottom: 10px;
-}
-.form-signin .checkbox {
-	font-weight: normal;
-}
-.form-signin .form-control {
-	position: relative;
-	font-size: 16px;
-	height: auto;
-	padding: 10px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-.form-signin .form-control:focus {
-	z-index: 2;
-}
-.topInputBox {
-	margin-bottom: -1px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-}
-.middleInputBox {
-	margin-bottom: -1px;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
-.bottomInputBox {
-	margin-bottom: 10px;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
-}
-.navbar {
-	margin-top: 4px;
-
-}
-.navbar-default .navbar-nav>.active>a, .navbar-default
-.navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-
-}
 /* Carousel base class */
 .carousel {
   margin-bottom: 30px;
-  margin-top: -90px;
+  margin-top: -100px;
 }
 
 .carousel-caption {
@@ -85,7 +21,7 @@ h2 {
 }
 
 .carousel .item {
-  margin-top: 10px;
+  margin-top: 0px;
   height: 350px;
   background-color: #777;
   border-bottom: 1px #bCbcbc solid;
