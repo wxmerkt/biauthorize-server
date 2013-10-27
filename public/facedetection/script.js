@@ -11,18 +11,37 @@ function biauthorize(linktext){
 window.addEventListener("message", addToken, false);
 
 function addToken(tokenval) {
+
+	var tokendata = JSON.parse(tokenval.data);
+
 	var authLink = document.getElementById("biauth_authlink");
+
 	var tokenField = document.createElement('input');
-	tokenField.value = tokenval.data;
+	tokenField.value = tokendata.ba_token;
 	tokenField.name = "biauth_token";
     tokenField.type = "hidden";
     tokenField.id = tokenField.name;
 
-    var textLabel = document.createElement('span');
+    var userField = document.createElement('input');
+	userField.value = tokendata.ba_user;
+	userField.name = "biauth_user";
+    userField.type = "hidden";
+    userField.id = userField.id;
+
+    var verifyField = document.createElement('input');
+	verifyField.value = tokendata.ba_verified;
+	verifyField.name = "biauth_verified";
+    verifyField.type = "hidden";
+    verifyField.id = verifyField.id;
+
+    var textLabel = document.createElement('div');
 	textLabel.id = "biauth_textlabel";
+	textLabel.class = "alert alert-dismissable alert-success";
     textLabel.innerHTML = "Your face has been approved.";
 
     authLink.parentNode.insertBefore(tokenField, authLink);
+    authLink.parentNode.insertBefore(userField, authLink);
+    authLink.parentNode.insertBefore(verifyField, authLink);
     authLink.parentNode.insertBefore(textLabel, authLink);
     authLink.parentNode.removeChild(authLink);
 }
