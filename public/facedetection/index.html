@@ -1,15 +1,31 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Sample Page</title>
+		<script type="text/javascript" src="script.js" /></script>
+		<script type="text/javascript">
+			//Init biauthorize on the login form
+			biauthorize_init("login_form");
+
+			//Define a callback function
+			function doneAuthentication() {
+				//This is executed after a face has been identified
+				document.getElementById("checkface_button").innerHTML = "Re-check my Face";
+				document.getElementById("checkface_label").style.display = "block";
+			}
+		</script>
 	</head>
 	<body>
-		<form action="done.html" method="post">
-			<input type="text" name="username" /><br/>
-			<input type="password" name="password" /><br/>
-			<script type="text/javascript" src="http://biauthorize.azurewebsites.net/facedetection/script.js" /></script>
-			<script type="text/javascript">
-				biauthorize("Get My Face!");
-			</script>
+
+		<!-- The ID for the form is used in the biauthorize_init() function -->
+		<form action="index.html" method="GET" id="login_form">
+			Username: <input type="text" name="username" /><br/>
+			Password: <input type="password" name="password" /><br/>
+			<!-- This button calls bizautorize() to launch the biauthorize window  -->
+			<button type="button" id="checkface_button" onclick="biauthorize(doneAuthentication);">
+				Check my Face
+			</button><br/>
+			<div id="checkface_label" style="display: none;">I've got your face</div>
 			<input type="submit" value="Log In" />
 		</form>
 	</body>

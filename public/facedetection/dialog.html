@@ -1,19 +1,25 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>biauthorize</title>
-        <script type="text/javascript" src="./face_files/jquery.min.js"></script>
-        <script type="text/javascript" src="./face_files/jsfeat.js"></script>
-        <script type="text/javascript" src="./face_files/compatibility.js"></script>
-        <script type="text/javascript" src="./face_files/camgaze.js"></script>
-        <script type="text/javascript" src="./face_files/frontalface.js"></script>
-
-        <script text="text/javascript" src="./face_files/cameraman.js"></script>
+        <title>Biauthorize</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="authenticity_token" name="csrf-param" />
+        <meta content="AMfqf1wc/PKmWWJZQXxXnDemKyXLkPpPH6jst4vGnkA=" name="csrf-token" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/custom.css" rel="stylesheet">
     </head>
     <body>
-        <canvas id="mainCanvas" height="440" width="580"></canvas>
-        <canvas id="previewCanvas" height="110" width="145"></canvas>
-        <video style="display: none;" autoplay=""></video>
-        <div id="statusNotifier">Waiting for camera</div>
-        <a href="javascript:window.location=imgURL;">View JPG</a>
+        <div class="container">
+            <script type="text/javascript" src="js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/jsfeat.js"></script>
+            <script type="text/javascript" src="js/compatibility.js"></script>
+            <script type="text/javascript" src="js/camgaze.js"></script>
+            <script type="text/javascript" src="js/frontalface.js"></script>
+            <script text="text/javascript" src="js/cameraman.js"></script>
+            <canvas id="mainCanvas" height="440" width="580"></canvas>
+            <canvas id="previewCanvas" height="110" width="145"></canvas>
+            <video style="display: none;" autoplay=""></video>
+            <div id="statusNotifier">Waiting for camera</div>
+        </div>
     </body>
 </html>
